@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+.icone-html {
+    height: 60px;
+    width: 60px;
+}
+
+.icone-css {
+    height: 40px;
+    width: 40px;
+}
+
+.icone-php {
+    height: 60px;
+    width: 60px;
+}
+
+.icone-python {
+    height: 40px;
+    width: 40px;
+}
+
+.icone-java {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 10%;
+}
+
+.icone-symfony {
+    height: 55px;
+    width: 55px;
+}
+
+header {
+    color: #eee;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+}
+
+.bg-image {
+    background: url(/images/rainbow.jpg) no-repeat center/cover;
+    height: 100vh;
+    width: 100%;
+    filter: blur(4px) contrast(80%);
+}
+
+h1 {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.15);
+    padding: 2rem 3rem;
+}
+
+#h1 {
+    font-size: 30px;
+}
+
+#h2 {
+    font-size: 25px;
+}
+
+h4 {
+    position: absolute;
+    top: 0%;
+    left: 30%;
+    transform: translateX(-30%);
+}
+
+.fa-tint {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: -20px;
+    animation: fall linear forwards;
+
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+.btn {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 90%;
+    left: 2%;
+    transform: translateX(-2%);
+}
