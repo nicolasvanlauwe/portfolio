@@ -2,101 +2,390 @@
 
 
 {% block title %}
-	Accueil
+	Nicolas Vanlauwe - Acceuil
 {% endblock %}
+
 {% block stylesheets %}
 	<link rel="stylesheet" href="{{asset('build/app.css')}}">
 {% endblock %}
 {% block javascripts %}
 	<script src="{{asset("build/app.js")}}"></script>
+	<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 {% endblock %}
 {% block body %}
-	<body>
-		<div class="bg-image"></div>
-		<h1 class="text-white">Bienvenue sur mon portfolio</h1>
-		<div class="btn">
-			<i class="fa-solid fa-arrow-down"></i>
+	<div class="remplissage">
+		<div class="accueil bg-reveal">
+			<h1 class="text-white" id="h1presentation"></h1>
 		</div>
-	</body>
+	</div>
 
 
-	<div class="container mt-5">
-		<h2 class="text-center">Mes compétences</h2>
-		<div class="row">
-			<div class="col-lg-4 mt-4">
-				<div class="card">
-					<div class="card-body">
-						<div class="icone-html">
-							<img class="img-fluid" src="{{asset('build/images/logo_html.png')}}" alt="logo_html">
-						</div>
-						<h4 class="card-title mt-3">HTML</h4>
-						<p class="card-text mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, error?</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 mt-4">
-				<div class="card servicesText">
-					<div class="card-body">
-						<div class="icone-css">
-							<img class="img-fluid" src="{{asset('build/images/logo_css.png')}}" alt="logo_css">
-						</div>
-						<br>
-						<h4 class="card-title mt-3">CSS</h4>
-						<p class="card-text mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, error?</p>
-					</div>
-				</div>
-			</div>
+	<div class="btn" id="down">
+		<p id="downsentence">Vers le bas</p>
+		<i class="fa-solid fa-arrow-down fa-xl"></i>
+	</div>
 
-			<div class="col-lg-4 mt-4">
-				<div class="card servicesText">
-					<div class="card-body">
-						<div class="icone-php">
-							<img class="img-fluid" src="{{asset('build/images/logo_php.png')}}" alt="logo_php">
-						</div>
-						<h4 class="card-title mt-3">PHP</h4>
-						<p class="card-text mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, error?</p>
-					</div>
-				</div>
+
+	<div class="container mt-3">
+		<div class="titrecomp">
+			<h2 id="h2comp">Mes compétences</h2>
+			<div class="lignes extend">
+				<div class="l1"></div>
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-lg-4 mt-4 ">
+				<div class="card border-info reveal-top card-comp">
+					<div class="card-body">
+						<div class="dropdown">
+							<div class="card-title">
+								<div class="icone-html">
+									<img class="img-fluid" src="{{asset('build/images/logo_html.png')}}" alt="logo_html">
+								</div>
+								<i class="fa-solid fa-angle-down btn-top false"></i>
+							</div>
+							<div class="bloc-links" id="bloc-links0">
+								<div class="niveau">
+									<div class="graduation1"></div>
+									<div class="graduation1"></div>
+									<div class="graduation1"></div>
+									<div class="graduation1"></div>
+									<div class="graduation0"></div>
+								</div>
+								<p class="card-text mt-3">
+									<strong>HTML</strong>
+									est un langage de balisage, il peut créer de lui-même une page web. Simple et logique c'est un language que j'affectionne. En s'alliant à d'autre langages il est encore plus puissant et donne une plus grande amplitude au développeur afin de créer leur application.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 mt-4">
+				<div class="card border-info reveal-top card-comp">
+					<div class="card-body">
+						<div class="dropdown">
+							<div class="card-title">
+								<div class="icone-css">
+									<img class="img-fluid" src="{{asset('build/images/logo_css.png')}}" alt="logo_css">
+								</div>
+								<i class="fa-solid fa-angle-down btn-top false"></i>
+							</div>
+
+							<div class="bloc-links" id="bloc-links1">
+								<div class="niveau">
+									<div class="graduation1"></div>
+									<div class="graduation1"></div>
+									<div class="graduation1"></div>
+									<div class="graduation1"></div>
+									<div class="graduation0"></div>
+								</div>
+								<p class="card-text mt-3">Le
+									<strong>CSS</strong>
+									est la continuité de l'HTML. Il permet de structurer et de designer une page brute et c'est cette liberté et toutes ces fonctionnalités que j'apprécie.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 mt-4">
+				<div class="card border-info reveal-top card-comp">
+					<div class="card-body">
+						<div class="dropdown">
+							<div class="card-title">
+								<div class="icone-javascript">
+									<img class="img-fluid" src="{{asset('build/images/logo_javascript.png')}}" alt="logo_javascript">
+								</div>
+								<i class="fa-solid fa-angle-down btn-top false"></i>
+							</div>
+
+							<div class="bloc-links" id="bloc-links2">
+								<div class="niveau">
+									<div class="graduation1"></div>
+									<div class="graduation1"></div>
+									<div class="graduation1"></div>
+									<div class="graduation0"></div>
+									<div class="graduation0"></div>
+								</div>
+								<p class="card-text mt-3">
+									<strong>JavaScript</strong>
+									langage de programmation de scripts permet de rendre interactive les pages web. Découvert depuis peu je débute donc dans ce langage très addictif je trouve.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<div class="row">
 			<div class="col-lg-4 mt-4">
-				<div class="card servicesText">
+				<div class="card border-info reveal-top card-comp">
 					<div class="card-body">
-						<div class="icone-python">
-							<img class="img-fluid" src="{{asset('build/images/logo_python.png')}}" alt="logo_python">
+						<div class="dropdown">
+							<div class="card-title">
+								<div class="icone-php">
+									<img class="img-fluid" src="{{asset('build/images/logo_php.png')}}" alt="logo_php">
+								</div>
+								<i class="fa-solid fa-angle-down btn-top false"></i>
+							</div>
+
+							<div class="bloc-links" id="bloc-links3">
+								<div class="niveau">
+									<div class="graduation1"></div>
+									<div class="graduation1"></div>
+									<div class="graduation1"></div>
+									<div class="graduation1"></div>
+									<div class="graduation0"></div>
+								</div>
+								<p class="card-text mt-3">Découvert plus tard que le HTML et le CSS, le
+									<strong>PHP</strong>
+									est un des langages orientés objet que je connais. L'ayant pratiqué au DUT dans les grandes lignes, j'ai pu approfondir ces connaissances dans la formation Symfony.</p>
+							</div>
 						</div>
-						<h4 class="card-title mt-3">Python</h4>
-						<p class="card-text mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, error?</p>
+
 					</div>
 				</div>
 			</div>
 
 			<div class="col-lg-4 mt-4">
-				<div class="card servicesText">
+				<div class="card border-info reveal-top card-comp">
 					<div class="card-body">
-						<div class="icone-java">
-							<img class="img-fluid" src="{{asset('build/images/logo_java.png')}}" alt="logo_java">
+						<div class="dropdown">
+							<div class="card-title">
+								<div class="icone-python">
+									<img class="img-fluid" src="{{asset('build/images/logo_python.png')}}" alt="logo_python">
+								</div>
+								<i class="fa-solid fa-angle-down btn-top false"></i>
+							</div>
+
+							<div class="bloc-links" id="bloc-links4">
+								<div class="niveau">
+									<div class="graduation1"></div>
+									<div class="graduation1"></div>
+									<div class="graduation1"></div>
+									<div class="graduation1"></div>
+									<div class="graduation0"></div>
+								</div>
+								<p class="card-text mt-3">
+									<strong>Python</strong>
+									est le premier langage auquel j'ai touché, je trouve que c'est le meilleur pour commencer car il est très intuitif.</p>
+							</div>
 						</div>
-						<h4 class="card-title mt-3">Java</h4>
-						<p class="card-text mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, error?</p>
+
 					</div>
 				</div>
 			</div>
 
 			<div class="col-lg-4 mt-4">
-				<div class="card servicesText">
+				<div class="card border-info reveal-top card-comp">
 					<div class="card-body">
-						<div class="icone-symfony">
-							<img class="img-fluid" src="{{asset('build/images/logo_symfony.png')}}" alt="logo_symfony">
+						<div class="dropdown">
+							<div class="card-title">
+								<div class="icone-java">
+									<img class="img-fluid" src="{{asset('build/images/logo_java.png')}}" alt="logo_java">
+								</div>
+								<i class="fa-solid fa-angle-down btn-top false"></i>
+							</div>
+
+							<div class="bloc-links" id="bloc-links5">
+								<div class="niveau">
+									<div class="graduation1"></div>
+									<div class="graduation1"></div>
+									<div class="graduation1"></div>
+									<div class="graduation0"></div>
+									<div class="graduation0"></div>
+								</div>
+								<p class="card-text mt-3">
+									<strong>Java</strong>
+									est aussi un langage orienté objet, je ne saurais dire pourquoi mais dans mon DUT ce dernier était ma bête noire, j'arrivais difficilement à transcrire ce que je voulais faire en code. Mais l'un de mes projets présenté après m'a permis de me familiariser avec lui.
+								</p>
+							</div>
 						</div>
-						<h4 class="card-title mt-3">Symfony</h4>
-						<p class="card-text mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, error?</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 mt-4">
+				<div class="card border-info reveal-top card-comp">
+					<div class="card-body">
+						<div class="dropdown">
+							<div class="card-title">
+								<div class="icone-symfony">
+									<img class="img-fluid" src="{{asset('build/images/logo_symfony.png')}}" alt="logo_symfony">
+								</div>
+								<i class="fa-solid fa-angle-down btn-top false"></i>
+							</div>
+
+							<div class="bloc-links" id="bloc-links6">
+								<div class="niveau">
+									<div class="graduation1"></div>
+									<div class="graduation1"></div>
+									<div class="graduation1"></div>
+									<div class="graduation0"></div>
+									<div class="graduation0"></div>
+								</div>
+								<p class="card-text mt-3">
+									<strong>Symfony</strong>, découvert grâce à la formation de Lior Chamla. C'est le premier framework que j'apprends à connaitre et je trouve cela très utile. Il m'a permis de développer mes connaissances en PHP et en Twig.</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 mt-4">
+				<div class="card border-info reveal-top card-comp">
+					<div class="card-body">
+						<div class="dropdown">
+							<div class="card-title">
+								<div class="icone-sql">
+									<img class="img-fluid" src="{{asset('build/images/logo_sql.png')}}" alt="logo_sql">
+								</div>
+								<i class="fa-solid fa-angle-down btn-top false"></i>
+							</div>
+
+							<div class="bloc-links" id="bloc-links7">
+								<div class="niveau">
+									<div class="graduation1"></div>
+									<div class="graduation1"></div>
+									<div class="graduation1"></div>
+									<div class="graduation0"></div>
+									<div class="graduation0"></div>
+								</div>
+								<p class="card-text mt-3">Découvert à mon DUT avec toutes les notions de base de données,
+									<strong>SQL</strong>
+									me permet de correspondre avec ces dernières pour échanger des informations.</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 mt-4">
+				<div class="card border-info reveal-top card-comp">
+					<div class="card-body">
+						<div class="dropdown">
+							<div class="card-title">
+								<div class="icone-c">
+									<img class="img-fluid" src="{{asset('build/images/logo_c.png')}}" alt="logo_c">
+								</div>
+								<i class="fa-solid fa-angle-down btn-top false"></i>
+							</div>
+
+							<div class="bloc-links" id="bloc-links8">
+								<div class="niveau">
+									<div class="graduation1"></div>
+									<div class="graduation1"></div>
+									<div class="graduation0"></div>
+									<div class="graduation0"></div>
+									<div class="graduation0"></div>
+								</div>
+								<p class="card-text mt-3">Le
+									<strong>C</strong>
+									et toute sa famille (<strong>C#</strong>
+									et
+									<strong>C++</strong>) m'ont été introduits au cours de mon DUT, au travers de certains cours de math où nous devions coder des programmes ou dans mes projets codés avec Windows Form.</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat itaque sapiente odio officiis? Minima laudantium molestiae vel voluptatem quos voluptates, quis maiores laborum? Impedit laborum rerum officiis eius neque id sunt? Porro consequuntur modi temporibus beatae reiciendis itaque, quo, hic eveniet doloribus nostrum quasi libero maiores et sit harum minus praesentium nam. Sed facere voluptatum mollitia similique porro sequi sit necessitatibus adipisci deleniti officia, quae odio nam assumenda dolorum et, ullam explicabo possimus illum ea ex doloribus? Laboriosam consequatur vero odio, ipsum commodi impedit fugiat tenetur eum quasi, placeat dolor porro nobis ea saepe atque. Vel nemo neque ad doloribus eius accusantium est ipsam repellat pariatur atque odio amet harum distinctio modi, saepe suscipit quibusdam incidunt inventore sunt? Placeat minima, ut totam nam culpa tempore temporibus delectus iure! Dignissimos accusantium facere eius, dolores beatae, eveniet blanditiis iure, odit architecto dolor soluta. Temporibus nemo quae iusto. Ducimus nostrum ipsum molestiae quam. Consectetur rerum inventore, id quisquam itaque praesentium, quas doloribus nobis porro dolore fuga suscipit mollitia eius delectus commodi ipsum fugit nihil odio impedit perferendis quaerat debitis dignissimos cum esse. Amet, aperiam. Dolorum, quibusdam corrupti, qui earum in id necessitatibus molestias ratione, reiciendis culpa non quos eligendi placeat ab enim esse quasi consequuntur doloribus? Nostrum et eligendi, autem similique quisquam atque iusto molestias molestiae numquam sed inventore reiciendis unde saepe corporis eaque quaerat obcaecati. Eum, aut debitis error vero sit expedita doloremque ducimus illum dolor pariatur nulla corporis, sunt consequuntur magnam odio, voluptatibus odit culpa molestias beatae porro dolores optio. Inventore voluptates rerum rem dolorem, velit quod dignissimos nemo similique harum, nam et sequi voluptatum aliquam incidunt quae doloremque eaque delectus modi, nobis ratione aspernatur maxime. Maiores earum nihil distinctio quia sit, rerum id, eos ullam ratione officia perferendis, officiis optio numquam molestias minima ut atque! Veritatis hic dignissimos nisi libero cum assumenda obcaecati et recusandae a. Laboriosam deserunt molestiae dignissimos dolorum, facere fugiat laborum quam accusantium, assumenda delectus natus, vero asperiores quos aliquid quisquam magni. Iste nobis perspiciatis, eligendi laboriosam autem blanditiis, rerum totam rem quia aperiam ab beatae sint veritatis odio iure accusantium commodi ipsum sequi eius minus suscipit dolorem soluta eos accusamus. Velit voluptate doloremque perspiciatis asperiores unde. Distinctio dignissimos expedita quibusdam sed. Officiis optio quaerat eligendi eveniet, nihil necessitatibus dicta sunt ea tempora fugit labore velit similique porro maxime, nam veritatis totam illum sapiente! Fugiat recusandae veritatis tempore, deleniti facilis nam obcaecati nobis quia aut minus illum, debitis fuga aperiam ducimus expedita doloribus harum! Consectetur ex optio tempore necessitatibus voluptate est, asperiores nulla vel ea corporis, nostrum atque provident iusto culpa! Sapiente eius ea sit, asperiores voluptate deleniti similique ratione itaque dolorem accusantium explicabo libero, laborum animi obcaecati eligendi est voluptatem? Optio ut fuga minima rem ea neque ipsam? Quibusdam eos magnam est, laborum officia nesciunt maxime voluptates laudantium aut voluptatum error inventore assumenda neque minus saepe cum unde distinctio. Suscipit doloremque commodi numquam necessitatibus, saepe illo libero quos ex unde? Similique, voluptas! Reiciendis neque officiis incidunt sit doloribus facilis ipsam fugit delectus assumenda, itaque praesentium aliquid ullam beatae. Vero mollitia error suscipit minima eligendi accusamus possimus minus id ipsa quibusdam blanditiis, consequatur sunt esse nisi doloremque necessitatibus magni, quis eveniet vitae illum nostrum exercitationem, quasi repellat? Atque hic sunt sequi nihil eaque aperiam nostrum facilis cupiditate! Quae dolores maxime alias accusamus earum magnam. Quos reprehenderit nisi, quisquam laboriosam iure, quidem deleniti eum voluptatum expedita assumenda quis modi. Tempore, asperiores omnis officiis debitis voluptate, enim perferendis dolor fugit minima assumenda hic ad qui ratione sunt itaque! Recusandae, nemo, dolores vitae ad excepturi facere distinctio, ipsa minus ducimus eaque quis. Amet in molestias ex! Dolorem illum ut iste distinctio quaerat consequuntur sunt suscipit tempore? Dolores necessitatibus maiores quasi porro praesentium totam eum laboriosam, excepturi sint odit quas ratione laborum aspernatur fuga dicta accusantium corrupti. Error tenetur iure harum debitis accusamus ratione? Voluptates ratione corrupti in suscipit accusamus quis laudantium voluptatibus corporis quos quo ex voluptas numquam dolores sequi error eius nulla, ab repudiandae sit beatae aspernatur inventore tempora excepturi! Consequuntur nobis natus labore ratione debitis neque excepturi, fuga eveniet, vel doloremque officiis mollitia laboriosam cumque, aperiam quae accusantium nihil voluptas dicta cupiditate deserunt inventore magni libero iure. Minus officia ducimus corrupti placeat delectus impedit fugit dolorem repellat. Magnam eveniet pariatur dignissimos esse, qui at dolore nemo laborum perferendis quaerat consectetur iure ex aut autem asperiores ipsam architecto tempora. Sunt quis reprehenderit adipisci reiciendis expedita quia ipsam doloremque distinctio quas nisi nam molestias, harum maiores alias, quos temporibus atque aspernatur perspiciatis! Ut, amet sapiente! Repellat, placeat eaque! Porro possimus quis corrupti itaque quod ullam tempore doloribus nihil, ipsam architecto, officia laborum quas earum quasi quisquam blanditiis delectus, error voluptates voluptatum optio vel quibusdam culpa! Eaque dolor voluptates vitae, quas optio illum ab sunt enim commodi ducimus impedit? Perspiciatis consequuntur repudiandae qui harum laudantium neque incidunt cum esse blanditiis reprehenderit necessitatibus, nobis enim sapiente est sit ipsa ipsam ea, quam eaque architecto placeat quasi voluptate illum aut. Totam magni asperiores aliquam maxime! Odio, quidem voluptate, cupiditate nam ipsum quia similique quisquam ex a fugit dolorem adipisci hic quos est sit iure sunt delectus. Laudantium, eum iure dolorum, dicta reprehenderit perspiciatis ipsa velit pariatur explicabo quibusdam consequuntur fugit suscipit, exercitationem consectetur? Sint ea ipsa qui vel, ipsam quisquam eos fugit autem distinctio at earum corporis, exercitationem architecto totam ut quod molestias, animi nobis quis recusandae. Sed quisquam mollitia nemo officia cupiditate fugit, inventore eum similique quas. Ducimus autem nisi repellendus voluptas expedita. Blanditiis, corrupti distinctio mollitia cum asperiores soluta a dolorem repellendus similique aperiam eligendi minima magni quibusdam necessitatibus hic libero minus cupiditate eveniet, debitis tempora id perferendis tempore recusandae sapiente. A voluptas praesentium assumenda totam. Laudantium repudiandae ratione non voluptas sint eum, minima accusamus necessitatibus nisi corrupti officia quasi neque consequatur dignissimos impedit aperiam reprehenderit optio quam error. Neque nisi in voluptates ab recusandae, aliquam fugiat quod cum perferendis ex labore explicabo est sint optio natus! Nam soluta facere illum totam incidunt doloremque sed explicabo alias facilis? Laboriosam vero id neque! Vitae voluptate beatae repudiandae nisi aut a exercitationem atque!</p>
+
+	<div class="separation"></div>
+
+	<div class="container mt-3">
+		<div class="titrecomp">
+			<h2 id="h2comp">Autres outils connus</h2>
+			<div class="extend">
+				<div class="l1"></div>
+			</div>
+		</div>
+
+		<div class="card border-info">
+			<div class="card-body" id="outils">
+
+				<div>
+					<img class="img-fluid icone-sas" src="{{asset('build/images/logo_sas.png')}}" alt="logo_sas">
+					<h3 class="mt-3">SAS</h3>
+				</div>
+				<div>
+					<img class="img-fluid icone-composer" src="{{asset('build/images/logo_composer.png')}}" alt="logo_composer">
+					<h3 class="mt-3">Composer</h3>
+				</div>
+				<div>
+					<img class="img-fluid icone-git" src="{{asset('build/images/logo_git.png')}}" alt="logo_git">
+					<h3 class="mt-3">Git</h3>
+				</div>
+				<div>
+					<img class="img-fluid icone-twig" src="{{asset('build/images/logo_twig.png')}}" alt="logo_twig">
+					<h3 class="mt-3">Twig</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="separation"></div>
+
+	<div class="container mt-3">
+		<div class="titrecomp">
+			<h2 id="h2comp">Mes diplômes et expériences</h2>
+			<div class="extend">
+				<div class="l1"></div>
+			</div>
+		</div>
+
+
+		<div class="card border-info diplome-exp">
+			<div class="card-body" id="exp">
+				<div class="contain-exp">
+					<div class="annee-exp">
+						<i class="fa-brands fa-symfony"></i>
+						<p>2022</p>
+					</div>
+					<div class="intitule-exp">
+						<p>Symfony 5 : Le guide complet par Lior Chamla</p>
+					</div>
+					<div class="endroit-exp">
+						<a href="{{path('projects_show')}}">
+							<button type="button" class="btn btn-info">
+								<p>Vers mes projets</p>
+							</button>
+						</a>
+					</div>
+				</div>
+				<div class="contain-exp">
+					<div class="annee-exp">
+						<i class="fa-solid fa-certificate"></i>
+						<p>2018-2019</p>
+					</div>
+					<div class="intitule-exp">
+						<p>DUT Informatique (1ère année obtenue)</p>
+					</div>
+					<div class="endroit-exp">
+						<p>IUT Robert Schuman 67400 Illkirch</p>
+					</div>
+				</div>
+				<div class="contain-exp">
+					<div class="annee-exp">
+						<i class="fa-solid fa-graduation-cap"></i>
+						<p>2018</p>
+					</div>
+					<div class="intitule-exp">
+						<p>Baccalauréat Scientifique : Spécialité Physique Chimie</p>
+					</div>
+					<div class="endroit-exp">
+						<p>Lycée Robert Schuman 67500 Haguenau</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
 {% endblock %}

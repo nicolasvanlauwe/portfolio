@@ -21,6 +21,10 @@ Encore
         // only copy files matching this pattern
         //pattern: /\.(png|jpg|jpeg)$/
     })
+    .copyFiles({
+        from: 'files',
+        to: 'files/[path][name].[ext]',
+    })
     // public path used by the web server to access the output path
     .setPublicPath('/build')
     // only needed for CDN's or sub-directory deploy

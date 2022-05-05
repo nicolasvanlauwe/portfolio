@@ -1,9 +1,49 @@
 {% extends "base.html.twig" %}
 
 {% block title %}
-	A propos
+	Nicolas Vanlauwe - À propos
+{% endblock %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{asset('build/app.css')}}">
+{% endblock %}
+
+{% block javascripts %}
+	<script src="{{asset("build/app.js")}}"></script>
+	<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+{% endblock %}
+
+{% block header %}
+	<div class="header"></div>
 {% endblock %}
 
 {% block body %}
-	<h1>Voici mon a propos</h1>
+	<div class="container mt-3 contain-about">
+		<div class="apropos">
+			<div class="texte-apropos reveal-left">
+				<p>
+					Bonjour,
+					<br>
+					Je m'appelle
+					<strong>Nicolas Vanlauwe</strong>, j'ai 21 ans et j’habite en Alsace. Au cours de mon enfance
+					<strong>l’informatique</strong>
+					me passionnait beaucoup mais je me suis rendu compte que c'était plutôt l'univers des
+					<strong>jeux vidéo</strong>
+					qui m'attiraient. Après le lycée je me suis donc dirigé vers un
+					<strong>DUT Informatique</strong>, la 1ère année m’a beaucoup plu il y avait des matières très intéressantes. Mais la suite portait plus sur de l’économie ou du système de réseaux (du codage brute à même la console) : c’est ce qui m’a fait décrocher. Suite à ça je me suis alors permis de pendre 2 années "sabbatiques" pour me ressourcer et surtout chercher ce que je souhaitai réellement faire professionnellement.
+					<br><br>
+					Après mûre réflexion je sais ce que je veux : me lancer dans
+					<strong>le développement web</strong>. Je regrette ces années perdues mais j'ai encore plus de motivation. Certes je n'ai pas de diplôme mais j'ai un bagage grâce à ma première année mais aussi les projets entrepris de manière autodidacte. C'est pourquoi je recherche un contrat ou un stage dans le but de me professionnaliser.
+				</p>
+			</div>
+			<div class="imagedl-apropos appear">
+				<img class="photo-apropos" src="{{asset('build/images/photo_about.JPG')}}" alt="photo a propos">
+				<a href="{{asset('build/files/cv_nicolas_vanlauwe.pdf')}}" download>
+					<button type="button" class="btn btn-outline-info btn-lg">
+						<i class="fa-solid fa-download"></i>
+						Télécharger mon CV</button>
+				</a>
+			</div>
+		</div>
+	</div>
 {% endblock %}

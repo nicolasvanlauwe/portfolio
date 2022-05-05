@@ -1,26 +1,24 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 	<div class="container-fluid">
-		<a class="navbar-brand" id="h1" href="{{path('homepage')}}">Nicolas Vanlauwe</a>
+		<a class="navbar-brand logo-nv" href="{{path('homepage')}}"><img class="logo-nv" src="{{asset("build/images/logo_nv.png")}}" alt="logo_nv"></a>
 
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+		<button class="navbar-toggler toggle-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
-		<div class="collapse navbar-collapse" id="navbarColor03">
+		<div class="collapse navbar-collapse navbar-links" id="navbarColor03">
 			<ul class="navbar-nav me-auto">
-				<li class="nav-item">
-					<a class="nav-link active" id="h2" href="{{path('homepage')}}">Accueil
-						<span class="visually-hidden">(current)</span>
-					</a>
+				<li class="nav-item ">
+					<a class="nav-link" id="h2-navbar" href="{{path('homepage')}}">Accueil</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" id="h2" href="{{path('projects_show')}}">Projets</a>
+				<li class="nav-item ">
+					<a class="nav-link" id="h2-navbar" href="{{path('projects_show')}}">Projets</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" id="h2" href="{{path('about_show')}}">À propos de moi</a>
+				<li class="nav-item ">
+					<a class="nav-link" id="h2-navbar" href="{{path('about_show')}}">À propos</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" id="h2" href="{{path('contact_show')}}">Contact</a>
+				<li class="nav-item ">
+					<a class="nav-link" id="h2-navbar" href="{{path('contact_show')}}">Contact</a>
 				</li>
 			</ul>
 		</div>

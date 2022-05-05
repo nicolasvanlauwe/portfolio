@@ -1,9 +1,90 @@
 {% extends "base.html.twig" %}
 
 {% block title %}
-	Projets
+	Nicolas Vanlauwe - Projets
+{% endblock %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{asset('build/app.css')}}">
+{% endblock %}
+{% block javascripts %}
+	<script src="{{asset("build/app.js")}}"></script>
+	<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+{% endblock %}
+
+{% block header %}
+	<div class="header"></div>
 {% endblock %}
 
 {% block body %}
-	<h1>Voici mes projets</h1>
+	<div class="container mt-3 contain-project">
+		<div class="titrecomp">
+			<h2 id="h2comp">Mes différents projets</h2>
+			<div class="extend">
+				<div class="l1"></div>
+			</div>
+		</div>
+		<div class="text">
+			<p>
+				<strong>Les projets</strong>
+				servent a former l'esprit d'équipe, le travail en groupe et la motivation personelle. Grâce à mon DUT j'ai pu m'essayer à cet exercice et créer quelques applications mais n'ayant pas le code de mes projets du DUT je ne peux que vous les expliquer, même si sans celui-ci ce n'est que des mots. Mais je ne m'arrête pas à ça et fais des projets de manière autodidacte ou grâce à des formations.
+			</p>
+		</div>
+		<div class="separation"></div>
+		<h3 class="mb-3 reveal-top">DUT</h3>
+		<div class="projet">
+			<div class="image"></div>
+			<div class="explication">
+				<small>Projet en solo avec un suivi en classe sur quelques mois.</small>
+				<span class="badge bg-info rounded-pill">HTML</span>
+				<span class="badge bg-info rounded-pill">CSS</span>
+				<p>
+					Dans un premier projet j'ai découvert les deux langages
+					<strong>HTML et CSS</strong>. Je devais créer un site pour un "client" avec un menu déroulant, des présentations de produits, un système de réservation. Ce projet m'a permis de débuter et d'aimer le langage web.
+					<br><br>
+				</p>
+				<small>Projet en trio avec un suivi en classe sur quelques mois.</small>
+				<span class="badge bg-info rounded-pill">Java</span>
+				<p>
+					Ensuite nous avons créé un jeu où il était question de poisson plus précisément de proie et de prédateur. C'était un projet en
+					<strong>Java</strong>, on avait donc des entités prédateur et proie qui héritait d'une entité poisson. Il y avait un cycle de vie et de reproduction. Les prédateurs pouvaient manger les proies à condition d’être sur des cases adjacentes à ces derniers.
+					<br><br>
+				</p>
+				<small>Projet à 6/7 en une journée.</small>
+				<p>
+					Ce troisième projet n'avait rien en rapport avec le code, il s'agissait plutôt d'un exercice de
+					<strong>gestion de projet</strong>, nous devions modéliser l'IUT de quelconques façon avec n'importe quel logiciel/application. Il y avait une gestion de ToDoList et nous devions ensuite présenter notre projet à la fin de la journée.
+					<br><br>
+				</p>
+				<small>Projet à 4 avec un suivi en classe sur quelques mois.</small>
+				<span class="badge bg-info rounded-pill">C#</span>
+				<p>
+					Ce projet était celui de fin d'année, le sujet était la monarchie nous avons donc créé un système de roi, reine et de descendance, le but étant de survivre le plus longtemps. Nous l'avons coder en
+					<strong>C# avec Windows Forms</strong>. Le jeu disposait d'un système d'argent, des évènements aléatoires venaient mettre des bâtons dans les roues. Il avait une interface comme un jeu lambda avec un design que nous avions créé. À la fin nous devions le mettre à disponibilité de tous pour chercher d'éventuels bugs afin de les corriger.
+				</p>
+
+
+			</div>
+		</div>
+		<div class="separation"></div>
+		<h3 class="mb-3 reveal-top">Symfony</h3>
+		<div class="projet">
+			<div class="image"></div>
+			<div class="explication">
+				<span class="badge bg-info rounded-pill">PHP</span>
+				<span class="badge bg-info rounded-pill">Twig</span>
+				<span class="badge bg-info rounded-pill">JavaScript</span>
+				<p>J'ai eu l'occasion de faire un projet avec le framework
+					<strong>Symfony</strong>
+					grâce à la formation de Lior Chamla. C'est une application type de e-commerce créé à l'aide de plusieurs outils dont
+					<strong>PHP</strong>,
+					<strong>Twig</strong>
+					et
+					<strong>JavaScript</strong>. Le design est peu travaillé mais la formation mettait un point d'honneur sur Symfony : comprendre sa force, ses enjeux et son utilisation.</p>
+
+				<a href="https://learn.web-develop.me/view/courses/symfony-5-le-guide-complet-debutants-et-intermediaires">Lien vers la formation</a>
+			</div>
+		</div>
+	</div>
+
 {% endblock %}

@@ -1,9 +1,37 @@
 {% extends "base.html.twig" %}
 
 {% block title %}
-	Contact
+	Nicolas Vanlauwe - Contact
+{% endblock %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{asset('build/app.css')}}">
+{% endblock %}
+{% block javascripts %}
+	<script src="{{asset("build/app.js")}}"></script>
+	<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 {% endblock %}
 
 {% block body %}
-	<h1>Voici mes contact</h1>
+	<div class="remplissage">
+		<div class="accueil-contact bg-reveal">
+			<div class="contact-all appear">
+				<div class="contact-content">
+					<i class="fa-solid fa-phone"></i>
+					<p>06 23 92 05 42</p>
+				</div>
+				<div class="contact-content">
+					<i class="fa-solid fa-envelope"></i>
+					<p>nicolas.vanlauwe@hotmail.com</p>
+				</div>
+				<div class="contact-content">
+					<i class="fa-brands fa-linkedin-in"></i>
+					<a href="https://www.linkedin.com/in/nicolas-vanlauwe-42620121b/">
+						<p>LinkedIn</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
 {% endblock %}
