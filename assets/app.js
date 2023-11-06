@@ -109,12 +109,10 @@ if (btnDrop) {
             if (btnDrop[i].classList.contains("false")) {
                 blocLinks.style.height = `${blocLinks.scrollHeight}px`
                 // toggleDown = true
-                console.log('descend')
                 btnDrop[i].className = "fa-solid fa-angle-down btn-bottom fa-rotate-180 true"
                 // return;
             } else {
                 blocLinks.style.height = 0
-                console.log('monte')
                 btnDrop[i].className = "fa-solid fa-angle-down btn-top false"
             }
 
